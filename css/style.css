@@ -1,0 +1,42 @@
+body{
+	background-image: url("../images/flag.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+*{
+	box-sizing: border-box;
+}
+
+form{
+}
+nav{
+	float: right;
+	padding-bottom: 10%;
+}
+
+section{
+	background-image:url("../images/rock1.jpg");
+	background-repeat: no-repeat;
+	background-position: left left;
+	background-size: cover;
+	width:50%;
+	margin:0 auto;
+	margin-top:10%;
+	clear:both;
+}
+
+
+#question1 p{
+	font-size: 25px;
+	color:white;
+	padding:20%;
+	text-align: center;
+}
+
+form li{
+	list-style-type: none;
+	color:white;
+}
+input[type="submit"]{
+	padding:10px;
+}
