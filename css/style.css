@@ -26,7 +26,7 @@ section{
 }
 
 
-#question1 p{
+#wrapper p{
 	font-size: 25px;
 	color:white;
 	padding:20%;
@@ -39,4 +39,8 @@ form li{
 }
 input[type="submit"]{
 	padding:10px;
+}
+span{
+	color:gold;
+	float:right;
 }
