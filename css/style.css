@@ -25,7 +25,11 @@ section{
 	clear:both;
 }
 
-
+a{
+	color:white;
+	font-size: 25px;
+	padding:15px;
+}
 #wrapper p{
 	font-size: 25px;
 	color:white;
@@ -43,4 +47,7 @@ input[type="submit"]{
 span{
 	color:gold;
 	float:right;
+}
+iframe{
+	padding:50px;
 }
