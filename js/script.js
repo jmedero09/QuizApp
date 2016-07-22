@@ -43,7 +43,7 @@ var questionNumber = 1;
 
 var correctAnswer = 0;
 
-function display(){
+function generateQuestion(){
 	if(currentQuestion < questions.length){
 
 		$('p').append(questions[currentQuestion].question);
@@ -65,45 +65,44 @@ function display(){
 		$('p').append("You Got " + correctAnswer + " out of " + questions.length);
 	}
 }
-
 function validateInput(input){
 
-	if(currentQuestion > questions.length){
+	if(currentQuestion > questions.length||input === undefined){//checks if the useer selected a radio button and make sure that he counter does not go out of bounds 
 
 		currentQuestion = currentQuestion;
 
 		questionNumber = questionNumber;
 
-	} else if(input === undefined){
-
-		currentQuestion = currentQuestion;
-
-		questionNumber = questionNumber;
-
-	} else if(input === questions[currentQuestion].answer){
-
-		currentQuestion++;
-
-		questionNumber++;
+	} else if(input === questions[currentQuestion].answer){//if the answer is correct
 
 		correctAnswer++;
+
+		display();
+
 	} else{
 	
-		currentQuestion++;
-
-		questionNumber++;
+		display();
 	}
 }
-function newGame(){
-	currentQuestion = 0;
-
-	questionNumber = 1;
-
-	correctAnswer = 0;
+function display(){
 
 	$('ul').empty();
 
  	$('p').empty();	
+
+ 	currentQuestion++;
+
+	questionNumber++;
+
+ 	generateQuestion();
+
+}
+function newGame(){
+	currentQuestion = -1;//used negative one to offset the currentQuestion++ in display
+
+	questionNumber = 0;
+
+	correctAnswer = 0;
 
 	display();
 }
@@ -116,12 +115,7 @@ $( "input[name='submit']" ).on('click', function() {
  	
  	validateInput($('input[type="radio"]:checked:first').val());
 
-	$('ul').empty();
-
- 	$('p').empty();	
-
- 	display();
  });
-
- 	display();
+	//This allows the first question to be displayed without having to run through the validate function 
+ 	generateQuestion();
 });
