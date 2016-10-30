@@ -70,8 +70,9 @@ function generateQuestion(){
 
 	} else{
 
-		$('#question').append("You Got " + correctAnswer + " out of " + questions.length);
+		//$('#question').append("You Got " + correctAnswer + " out of " + questions.length);
 		$('.new').show();
+		results(correctAnswer);
 	}
 }
 function validateInput(input){
@@ -114,6 +115,35 @@ function newGame(){
 	correctAnswer = 0;
 
 	display();
+}
+function results(correctAnswer){
+
+	console.log(correctAnswer);
+	if(correctAnswer===0){
+		$('body').css('background-image', 'url("images/zero.jpg")');
+		$('#question').append("0% really have you even seen one ");
+	}
+	else if(correctAnswer === 1){
+
+		$('body').css('background-image', 'url("images/twenty.jpg")');
+		$('#question').append("20% you are not a real Rocky fan yet ");
+
+	} else if(correctAnswer === 2){
+
+		$('body').css('background-image', 'url("images/forty.jpg")');
+		$('#question').append("40% You wish to be a Rock fan ");
+	} else if(correctAnswer === 3){
+		$('body').css('background-image', 'url("images/sixty.jpg")');
+		$('#question').append("60% You're posing as a Rockey fan ");
+	}
+	else if(correctAnswer === 4){
+		$('body').css('background-image', 'url("images/eighty.jpg")');
+		$('#question').append("80% You're a rocky fan in training ");
+	}
+	else{
+		$('body').css('background-image', 'url("images/onehundred.jpg")');
+		$('#question').append("100% You're a true rocky fan ");
+	}
 }
 
 $('.new').on('click', function(){

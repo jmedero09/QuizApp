@@ -67,7 +67,7 @@ form li{
 	margin-bottom: 10px;
 }
 
-input[type="submit"]{
+#newgame,input[type="submit"]{
 	padding:10px;
 	width: 150px;
 	margin-right: 50px;
@@ -78,6 +78,10 @@ input[type="submit"]{
     float:right;
     clear:both;
 }
+#newgame{
+	text-align: center;
+}
+
 input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
