@@ -12,8 +12,8 @@ var questions = [
 	},
 	{
 		question:'Which Holiday did Rocky and Adrian have their first date?',
-		choices:['Valentines Day','Easter','Christmas','Thankgsgiving'],
-		answer:'Thankgsgiving',
+		choices:['Valentines Day','Easter','Christmas','Thanksgiving'],
+		answer:'Thanksgiving',
 		background:'images/two.jpg'
 	},
 	{
