@@ -9,8 +9,8 @@ body{
 }
 #flag{
 	background-image: url("../images/rockyflag.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;	
+	background-size: cover;
+	background-repeat: repeat-y;
 }
 .content{
 	width:450px;
@@ -19,22 +19,9 @@ body{
 }
 #flag h1{
 	font-size:60px;
-/*	position: relative;
-	top:510px;
-	left:700px;*/
 	color: white;
 }
 
-/*#flag img{
-    position: relative;
-    top: 410px;
-    right: 150px;
-    float: right;
-    width: 150px;
-}*/
-
-form{
-}
 nav{
 	float: right;
 	padding-bottom: 10px;
